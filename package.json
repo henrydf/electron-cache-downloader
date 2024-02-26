@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/henrydf/electron-cache-downloader.git"
   },
-  "bin": "./cli",
+  "bin": "./cli.js",
   "engines": {
     "node": "18"
   },
@@ -20,7 +20,6 @@
     "@electron/get": "^3.0.0",
     "cli-progress": "^3.12.0",
     "commander": "^12.0.0",
-    "hpagent": "^1.2.0",
-    "tunnel": "^0.0.6"
+    "hpagent": "^1.2.0"
   }
 }
