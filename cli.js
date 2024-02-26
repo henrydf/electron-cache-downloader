@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const {program} = require('commander');
 
 const pkg = require('./package.json');
@@ -62,15 +63,18 @@ function gotVersion(version) {
 const cliProgress = require('cli-progress');
 const bar1 = new cliProgress.SingleBar({
   fps: 5,
-  format: '{bar} {percentage}% | ETA: {eta_formatted} | {value}',
+  format: '{bar} {percentage}% | {value} / {total} | {duration_formatted} | ETA: {eta_formatted}',
   formatValue(v, options, type) {
-    if (type === 'value')
+    if (['value', 'total'].includes(type))
       return `${(v/1024/1024).toFixed(1)}MB`;
     return v;
   },
   stopOnComplete: true,
 }, cliProgress.Presets.shades_classic);
 let total = 0;
+// disable default progress bar
+process.env.ELECTRON_GET_NO_PROGRESS = '1';
+
 download(gotVersion(options.target), {
   downloadOptions: {
     agent: options.proxy ? {
