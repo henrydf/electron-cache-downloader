@@ -2,6 +2,6 @@
 * then `npm install electron` will use the cache to avoid network request
 
 ```shell
-npx @henrydf/electro-downloader -t 27 -p http://localhost:1080
+npx @henrydf/electron-downloader -t 27 -p http://localhost:1080
 ### or use -h to see help message
 ```
