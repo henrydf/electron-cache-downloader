@@ -1,6 +1,6 @@
 {
   "name": "@henrydf/electron-downloader",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "download electron into cache",
   "main": "cli.js",
   "repository": {
