@@ -1,0 +1,28 @@
+{
+  "name": "@henrydf/electron-downloader",
+  "version": "1.0.0",
+  "description": "download electron into cache",
+  "main": "cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henrydf/electron-cache-downloader.git"
+  },
+  "bin": {
+    "electron-cache-downloader": "./cli"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "test": "node cli.js -t latest"
+  },
+  "author": "Henry",
+  "license": "MIT",
+  "dependencies": {
+    "@electron/get": "^3.0.0",
+    "cli-progress": "^3.12.0",
+    "commander": "^12.0.0",
+    "hpagent": "^1.2.0",
+    "tunnel": "^0.0.6"
+  }
+}
