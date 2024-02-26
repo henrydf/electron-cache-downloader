@@ -92,6 +92,7 @@ download(gotVersion(options.target), {
       } else if (progress.transferred < progress.total) {
         bar1.update(progress.transferred);
       } else if (progress.transferred > 0 && (progress.transferred === progress.total || progress.percent === 1)) {
+        bar1.update(progress.transferred);
         bar1.stop();
       }
     },
