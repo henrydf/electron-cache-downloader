@@ -7,9 +7,7 @@
     "type": "git",
     "url": "https://github.com/henrydf/electron-cache-downloader.git"
   },
-  "bin": {
-    "electron-cache-downloader": "./cli"
-  },
+  "bin": "./cli",
   "engines": {
     "node": "18"
   },
